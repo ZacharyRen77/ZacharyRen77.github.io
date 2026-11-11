@@ -1,0 +1,6 @@
+baseURL: https://blog.160710.xyz/
+locale: zh-CN
+title: "Zachary's Blog"
+theme: PaperMod
+params:
+  author: Zachary
