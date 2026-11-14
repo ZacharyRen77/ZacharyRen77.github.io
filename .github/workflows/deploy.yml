@@ -19,9 +19,18 @@ jobs:
           hugo-version: "latest"
           extended: true
           
-      # 👇 新增这一步：安装 Dart Sass
       - name: Install Dart Sass
-        run: npm install -g sass
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: "sass/dart-sass"
+          latest: true
+          filename: "dart-sass-*-linux-x64.tar.gz"
+          tarBall: false
+          zipBall: false
+          extract: true
+          
+      - name: Add Dart Sass to PATH
+        run: echo "$(pwd)/dart-sass" >> $GITHUB_PATH
         
       - run: hugo --minify
       
