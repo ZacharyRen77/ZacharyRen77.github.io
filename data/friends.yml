@@ -1,0 +1,12 @@
+- name: Axion11 - 博客园
+  url: https://www.cnblogs.com/Axion
+  desc: 专注红队实战与内网渗透的攻防笔记
+  image: /avatars/cx330.png
+  badge: Blog
+#  remark: 一个可爱的 Hexo 主题
+- name: Tanya2023 - 博客园
+  url: https://www.cnblogs.com/shaoqiblog
+  desc: 专注 Java 代码审计与经典漏洞的复现分析
+  image: /avatars/tanya203.png
+  badge: Blog
+#  remark: 一个可爱的 Astro 主题

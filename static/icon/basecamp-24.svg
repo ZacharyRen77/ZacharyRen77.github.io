@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 128" role="img" aria-label="basecamp">
+<defs>
+  <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7654E8"/>
+    <stop offset=".52" stop-color="#33228E"/>
+    <stop offset="1" stop-color="#111A55"/>
+  </linearGradient>
+  <linearGradient id="cupBody" x1="0" y1="0" x2="1" y2=".25">
+    <stop offset="0" stop-color="#FFB5C7"/>
+    <stop offset=".28" stop-color="#A77BFA"/>
+    <stop offset=".66" stop-color="#6659E7"/>
+    <stop offset="1" stop-color="#2855C7"/>
+  </linearGradient>
+  <linearGradient id="cupSide" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7B62EF"/>
+    <stop offset="1" stop-color="#253FAD"/>
+  </linearGradient>
+  <linearGradient id="coffee" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFE5C6"/>
+    <stop offset=".55" stop-color="#A8B8F5"/>
+    <stop offset="1" stop-color="#4E78E6"/>
+  </linearGradient>
+  <linearGradient id="steam" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#354A9A"/>
+    <stop offset=".5" stop-color="#8298E5"/>
+    <stop offset="1" stop-color="#293C85"/>
+  </linearGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2=".8" y2="1">
+    <stop offset="0" stop-color="#FFF0DF"/>
+    <stop offset=".58" stop-color="#F5E5E1"/>
+    <stop offset="1" stop-color="#B9C9FF"/>
+  </linearGradient>
+  <linearGradient id="paperEdge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFE6CF"/>
+    <stop offset="1" stop-color="#7589DB"/>
+  </linearGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="2.2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="b"/>
+    <feOffset dy="2" result="o"/>
+    <feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<!-- low, wide violet pool beneath the objects -->
+<path d="M9 108
+         C18 99 27 88 39 84
+         C52 78 68 85 79 88
+         C94 93 105 98 119 108
+         C122 111 119 114 114 114
+         L14 114
+         C8 114 6 111 9 108Z"
+      fill="url(#ground)" filter="url(#glow)"/>
+<path d="M12 109 C30 91 42 87 57 90 C75 94 91 107 116 111"
+      fill="none" stroke="#9B78FF" stroke-width="1.5" opacity=".65"/>
+
+<!-- handle behind the mug -->
+<path d="M60 66
+         C77 61 84 69 82 81
+         C80 92 72 96 64 91"
+      fill="none" stroke="#263FAD" stroke-width="9" stroke-linecap="round"/>
+<path d="M61 66
+         C76 63 80 70 78 80"
+      fill="none" stroke="#5574E5" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+
+<!-- curling steam -->
+<path d="M49 57
+         C38 48 45 39 57 36
+         C70 33 72 27 63 21
+         C52 14 55 7 64 2
+         C57 10 61 16 70 21
+         C83 29 79 39 65 43
+         C53 47 50 52 55 60Z"
+      fill="url(#steam)" filter="url(#shadow)"/>
+<path d="M62 4 C57 11 61 16 69 21"
+      fill="none" stroke="#A4B5F6" stroke-width="1.5" opacity=".45"/>
+
+<!-- mug body -->
+<path d="M31 49
+         L64 49
+         L63 82
+         C63 96 55 104 43 103
+         C31 102 26 94 26 82
+         L26 53Z"
+      fill="url(#cupBody)" filter="url(#shadow)"/>
+<path d="M47 51 L64 50 L63 82
+         C63 95 56 102 47 103Z"
+      fill="url(#cupSide)" opacity=".55"/>
+
+<!-- elliptical coffee opening and ceramic rim -->
+<path d="M26 51
+         C26 44 63 42 77 49
+         C84 53 76 59 63 61
+         C47 64 27 59 26 53Z"
+      fill="url(#coffee)"/>
+<path d="M26 51
+         C27 43 63 42 77 49
+         C84 53 76 59 63 61
+         C46 64 28 59 26 53Z"
+      fill="none" stroke="#F6D8D2" stroke-width="2.2"/>
+<path d="M30 51 C39 47 62 46 73 50"
+      fill="none" stroke="#FFF0E5" stroke-width="1.5" opacity=".7"/>
+
+<!-- angled handwritten note -->
+<path d="M76 53
+         C78 47 81 45 87 47
+         L116 55
+         C121 56 123 60 121 65
+         L103 111
+         C101 116 97 117 92 115
+         L64 105Z"
+      fill="url(#paperEdge)" opacity=".95"/>
+<path d="M75 51
+         C77 46 81 44 87 46
+         L111 53
+         C117 55 119 59 117 64
+         L99 108
+         C97 113 94 114 89 112
+         L62 102Z"
+      fill="url(#paper)" filter="url(#shadow)"/>
+<!-- three soft handwritten lines -->
+<path d="M81 62 L103 69
+         M77 75 L98 82
+         M73 88 L94 95"
+      fill="none" stroke="#8995D9" stroke-width="3.6" stroke-linecap="round" opacity=".9"/>
+<path d="M63 102 C76 107 88 112 99 109"
+      fill="none" stroke="#E7D8F2" stroke-width="1.2" opacity=".65"/>
+</svg>

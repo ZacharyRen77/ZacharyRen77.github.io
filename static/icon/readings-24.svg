@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 128" role="img" aria-label="readings">
+
+<defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#72C8FF"/><stop offset=".52" stop-color="#3478F6"/><stop offset="1" stop-color="#4930C9"/>
+  </linearGradient>
+  <linearGradient id="blue2" x1="0" y1="0" x2=".9" y2="1">
+    <stop offset="0" stop-color="#55D8F5"/><stop offset="1" stop-color="#2751D8"/>
+  </linearGradient>
+  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#B58BFF"/><stop offset=".55" stop-color="#7148E8"/><stop offset="1" stop-color="#3B24A6"/>
+  </linearGradient>
+  <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFD18A"/><stop offset=".55" stop-color="#FF944C"/><stop offset="1" stop-color="#E65A83"/>
+  </linearGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFF0E5"/><stop offset=".55" stop-color="#B9D8FF"/><stop offset="1" stop-color="#7561E8"/>
+  </linearGradient>
+  <linearGradient id="darkglass" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#263C91"/><stop offset="1" stop-color="#171B59"/>
+  </linearGradient>
+  <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3.2" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+    <feOffset dy="3" result="off"/>
+    <feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer>
+    <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+
+<!-- layered open book -->
+<path d="M17 37q23-12 47 5 24-17 47-5v63q-24-9-47 8-24-17-47-8Z" fill="#27217F" opacity=".9" transform="translate(4 4)"/>
+<path d="M17 34q23-12 47 5 24-17 47-5v63q-24-9-47 8-24-17-47-8Z" fill="url(#violet)"/>
+<path d="M17 34q23-12 47 5v71Q40 90 17 97Z" fill="url(#paper)"/>
+<path d="M64 39q24-17 47-5v63q-24-9-47 13Z" fill="url(#blue)"/>
+<path d="M64 39v71" stroke="#C9DFFF" stroke-width="3" opacity=".75"/>
+<path d="M26 49q13-2 25 5M26 62q13-2 25 5M26 75q13-2 25 5" fill="none" stroke="#8CB9F6" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+<path d="M75 49q12-7 25-5M75 63q12-7 25-5M75 77q12-7 25-5" fill="none" stroke="#B9C8FF" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+<path d="M88 28h14v31l-7-7-7 7Z" fill="url(#orange)"/>
+<path d="M17 97q24-8 47 13 23-21 47-13" fill="none" stroke="#8DBEFF" stroke-width="3" opacity=".6"/>
+
+</svg>

@@ -1,0 +1,29 @@
+{{- define "main" -}}
+  <h1 style="margin: 20px 0;">{{ .Title }}</h1>
+  {{- with .Content }}<div class="section-content">{{ . }}</div>{{ end -}}
+  {{- $posts := .RegularPages -}}
+  {{- $sort_config := .Site.Params.sort_order.home -}}
+  {{- if eq $sort_config "weight" -}}
+    {{- $posts = $posts.ByWeight -}}
+  {{- else if eq $sort_config "weight-reverse" -}}
+    {{- $posts = $posts.ByWeight.Reverse -}}
+  {{- else if eq $sort_config "date-reverse" -}}
+    {{- $posts = $posts.ByDate.Reverse -}}
+  {{- else -}}
+    {{- $posts = $posts.ByDate -}}
+  {{- end -}}
+  {{- $pageSize := 0 -}}
+  {{- with $.Site.Params.paginate.post -}}
+    {{- $pageSize = . -}}
+  {{- end -}}
+  {{- $paginator := "" -}}
+  {{- if gt $pageSize 0 -}}
+    {{- $paginator = .Paginate $posts $pageSize -}}
+  {{- else -}}
+    {{- $paginator = .Paginate $posts -}}
+  {{- end -}}
+  {{- range $k, $v := $paginator.Pages -}}
+    {{- partial "post.html" (dict "index" $k "ctx" . "page" $v) -}}
+  {{- end -}}
+  {{- partial "pagination.html" . -}}
+{{- end -}}
