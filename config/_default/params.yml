@@ -472,7 +472,7 @@ gitalk:
 
 # https://giscus.app/zh-CN
 giscus:
-  enable: false
+  enable: true
   repo: ZacharyRen77/ZacharyRen77.github.io
   repoId: R_kgDOVqTgGA
   category: Announcements
